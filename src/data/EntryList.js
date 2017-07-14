@@ -1,6 +1,7 @@
 var EntryList = [
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'This tree was struck by lightning 3 hours ago',
         voteCount: 10,
         link: '(i.redd.it)',
@@ -10,6 +11,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'My good friend Bear telling his son and daughter goodbye. He died the next evening from pancreatic cancer.',
         voteCount: 9,
         link: '(i.redd.it)',
@@ -19,6 +21,7 @@ var EntryList = [
     },
     {
         type: 'text',
+        id: _.uniqueId('entry_'),
         topic: 'Got my Soap Bubble Machine to work',
         voteCount: 12,
         link: '(i.redd.it)',
@@ -28,6 +31,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'What the....? Who uses red paint for a base color for a wood chipper?',
         voteCount: 9,
         link: '(i.redd.it)',
@@ -37,6 +41,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'Richard and his crew attempted to invent the Ex-Wife Sandwich™ because Nicole neglected to make one for each of them',
         voteCount: 75,
         link: '(imgur.com)',
@@ -46,6 +51,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'Today (July 14th) SpongeBob turns 31 years old',
         voteCount: 12,
         link: '(i.redd.it)',
@@ -55,6 +61,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'Maybe repost? But still funny.',
         voteCount: 10,
         link: '(i.redd.it)',
@@ -64,6 +71,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'Comcast Subscribers Are Paying Up To $1.9 Billion a Year for Over-the-Air Channels They Can Get Free',
         voteCount: 52,
         link: '(i.redd.it)',
@@ -73,6 +81,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'My bill from Bell. Used 109GB on a 100GB/month Mifi. Still dealing with creditors and legal assistance on this one. $6000+',
         voteCount: 10,
         link: '(i.redd.it)',
@@ -82,6 +91,7 @@ var EntryList = [
     },
     {
         type: 'text',
+        id: _.uniqueId('entry_'),
         topic: 'My sweet British aunt doesnt recognize the infamous Wet Bandits from the movie Home Alone',
         voteCount: 23,
         link: '(i.redd.it)',
@@ -91,8 +101,9 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'What part of aging do you wish someone had warned you about?',
-        voteCount: 75,
+        voteCount: 74,
         link: '(i.redd.it)',
         postedBy: 'z4ce',
         commentsCount: 785,
@@ -100,6 +111,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'Sauron is going for a more modern look these days',
         voteCount: 52,
         link: '(i.redd.it)',
@@ -109,6 +121,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'Getting rid of this plank[xpost /r/holdmybeer]',
         voteCount: 56,
         link: '(i.redd.it)',
@@ -118,6 +131,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'DO I LOOK LIKE I NEED AN APP TO GET LAID?!',
         voteCount: 22,
         link: '(i.redd.it)',
@@ -127,6 +141,7 @@ var EntryList = [
     },
     {
         type: 'text',
+        id: _.uniqueId('entry_'),
         topic: 'Slow Cooker Honey Garlic Chicken',
         voteCount: 55,
         link: '(i.redd.it)',
@@ -136,6 +151,7 @@ var EntryList = [
     },
     {
         type: 'text',
+        id: _.uniqueId('entry_'),
         topic: 'Nine Inch Nails Detail New ADD VIOLENCE EP, Share New Song “LESS THAN”: Listen',
         voteCount: 68,
         link: '(i.redd.it)',
@@ -145,6 +161,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'Opened this sub today and',
         voteCount: 52,
         link: '(i.redd.it)',
@@ -154,6 +171,7 @@ var EntryList = [
     },
     {
         type: 'text',
+        id: _.uniqueId('entry_'),
         topic: 'PsBattle: David Hasselhoff posing with his wax stunt double on the set of the SpongeBob movie.',
         voteCount: 12,
         link: '(i.redd.it)',
@@ -163,6 +181,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'VLC player successfully installed',
         voteCount: 3,
         link: '(i.redd.it)',
@@ -172,6 +191,7 @@ var EntryList = [
     },
     {
         type: 'link',
+        id: _.uniqueId('entry_'),
         topic: 'German Shepherd with satellites for ears.',
         voteCount: 65,
         link: '(i.redd.it)',

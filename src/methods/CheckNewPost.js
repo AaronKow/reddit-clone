@@ -13,19 +13,16 @@ const CheckNewPost = function() {
     headerLink.onclick = () => {
         $global.newSubmit = false;
         UpdateDOM();
-        CheckNewPost();
     }
 
     submitLink.onclick = () => {
         $global.newSubmit = "link";
         UpdateDOM();
-        CheckNewPost();
     }
 
     submitText.onclick = () => {
         $global.newSubmit = "text";
         UpdateDOM();
-        CheckNewPost();
     }
 }
 

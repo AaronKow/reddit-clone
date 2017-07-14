@@ -17,7 +17,7 @@ const Entries = () => {
 
 function EntryLoop() {
     var entries = '',
-        sortedEntryList = _.sortBy(EntryList, num => -num.voteCount);   // sort the list in descending order according to the voteCount
+        sortedEntryList = _.sortBy(EntryList, num => -num.voteCount); // sort the list in descending order according to the voteCount
 
     for (var i = 0; i < sortedEntryList.length; i++) {
         entries += `
@@ -28,12 +28,14 @@ function EntryLoop() {
             <!-- voting -->
             <div class="voting">
                 <a href="#" class="upvote">
+                    <span style="display:none;">${ sortedEntryList[i].id }</span>
                     <i class="fa fa-arrow-up"></i>
                 </a>
 
                 <p class="count">${ sortedEntryList[i].voteCount }</p>
 
                 <a href="#" class="downvote">
+                    <span style="display:none;">${ sortedEntryList[i].id }</span>
                     <i class="fa fa-arrow-down"></i>
                 </a>
             </div>
@@ -104,18 +106,5 @@ function EntryLoop() {
     }
     return entries;
 }
-
-// (function upVote() {
-//     console.log(EntryList[0].voteCount);
-//     var timer = setInterval(function() {
-//         if (EntryList[0].voteCount > 25) {
-//             clearInterval(timer);
-//         }
-//         EntryList[0].voteCount++;
-//         UpdateDOM();
-//         console.log(EntryList[0].voteCount);
-//         console.log(EntryList[0].topic);
-//     }, 1000);
-// })();
 
 export default Entries;

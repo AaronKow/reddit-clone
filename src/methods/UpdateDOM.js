@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 
 // methods
 import CheckNewPost from './CheckNewPost';
+import CheckVote from './CheckVote';
 
 
 const UpdateDOM = () => {
@@ -17,6 +18,10 @@ const UpdateDOM = () => {
 
     // check if user wanted to create a new Post
     CheckNewPost();
+
+    // check if user click vote
+    // if ($global.voteChecker)
+        CheckVote();
 };
 
 export default UpdateDOM;
