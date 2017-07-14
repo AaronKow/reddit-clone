@@ -1,6 +1,7 @@
 // Entries (Contain all the list of topics)
 
 import EntryList from '../data/EntryList';
+import UpdateDOM from '../methods/UpdateDOM';
 
 
 const Entries = () => {
@@ -15,9 +16,10 @@ const Entries = () => {
 };
 
 function EntryLoop() {
-    var entries = '';
-    for (var i = 0; i < EntryList.length; i++) {
-        console.log(EntryList[i].topic);
+    var entries = '',
+        sortedEntryList = _.sortBy(EntryList, num => -num.voteCount);   // sort the list in descending order according to the voteCount
+
+    for (var i = 0; i < sortedEntryList.length; i++) {
         entries += `
         <div class="entry">
             <!-- Numbering -->
@@ -25,34 +27,34 @@ function EntryLoop() {
 
             <!-- voting -->
             <div class="voting">
-                <a href="#">
+                <a href="#" class="upvote">
                     <i class="fa fa-arrow-up"></i>
                 </a>
 
-                <p class="count">${ EntryList[i].voteCount }</p>
+                <p class="count">${ sortedEntryList[i].voteCount }</p>
 
-                <a href="#">
+                <a href="#" class="downvote">
                     <i class="fa fa-arrow-down"></i>
                 </a>
             </div>
 
             <!-- thumbnail -->
-            <a href="#" class="thumbnail ${ EntryList[i].type }"></a>
+            <a href="#" class="thumbnail ${ sortedEntryList[i].type }"></a>
 
             <!-- topic -->
             <div class="topic">
                 <div class="title">
                     <a href="#" class="link">
-                        ${ EntryList[i].topic }
+                        ${ sortedEntryList[i].topic }
                     </a>
 
                     <a href="#" class="domain">
-                        ${ EntryList[i].link }
+                        ${ sortedEntryList[i].link }
                     </a>
                 </div>
 
                 <div class="details">
-                    <a href="#" class="btn-expand ${ EntryList[i].type }"></a>
+                    <a href="#" class="btn-expand ${ sortedEntryList[i].type }"></a>
 
                     <div class="inner-details">
                         <div class="submit-detail">
@@ -61,7 +63,7 @@ function EntryLoop() {
                             </p>
 
                             <a href="#" class="user">
-                                ${ EntryList[i].postedBy }
+                                ${ sortedEntryList[i].postedBy }
                             </a>
 
                             <p>
@@ -73,13 +75,13 @@ function EntryLoop() {
                             </a>
 
                             <a href="#" class="subreddit-link">
-                                ${ EntryList[i].subreddit }
+                                ${ sortedEntryList[i].subreddit }
                             </a>
                         </div>
 
                         <div class="action-detail">
                             <a href="#" class="comments">
-                                ${ EntryList[i].commentsCount } comments
+                                ${ sortedEntryList[i].commentsCount } comments
                             </a>
                             <a href="#" class="share">
                                 share
@@ -100,8 +102,20 @@ function EntryLoop() {
         </div>
         `;
     }
-
     return entries;
 }
+
+// (function upVote() {
+//     console.log(EntryList[0].voteCount);
+//     var timer = setInterval(function() {
+//         if (EntryList[0].voteCount > 25) {
+//             clearInterval(timer);
+//         }
+//         EntryList[0].voteCount++;
+//         UpdateDOM();
+//         console.log(EntryList[0].voteCount);
+//         console.log(EntryList[0].topic);
+//     }, 1000);
+// })();
 
 export default Entries;
