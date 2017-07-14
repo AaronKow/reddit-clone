@@ -737,6 +737,10 @@ aside.grippy {
     border-radius: .5vmin;
 }
 
+.form-block > p.alert {
+		color: red;
+}
+
 .form-block > input:not([type="checkbox"]),
 .form-block > textarea {
     border: 1px solid gray;
@@ -746,6 +750,11 @@ aside.grippy {
     width: 100%;
     padding: 1vmin;
     box-sizing: border-box;
+}
+
+.form-block > input:not([type="checkbox"]).alert,
+.form-block > textarea.alert {
+		border: 1px solid red;
 }
 
 .form-block > .send-reply {

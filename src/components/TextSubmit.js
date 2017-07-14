@@ -4,23 +4,23 @@ const TextSubmit = `
 </div>
 
 <div class="form-block">
-    <p>*title</p>
-    <textarea class="title" name="title" rows="2" cols="80"></textarea>
+    <p class="title-label">*title (must not exceed 255 characters)</p>
+    <textarea class="title" name="title" rows="2" cols="80"  maxlength="255" ></textarea>
 </div>
 
 <div class="form-block">
     <p>text (optional)</p>
-    <textarea class="title" name="title" rows="4" cols="80"></textarea>
+    <textarea class="text" name="title" rows="4" cols="80" maxlength="255" ></textarea>
 </div>
 
 <div class="form-block">
-    <p>*choose a subreddit</p>
-    <input class="subreddit" type="text" name="subreddit" value="" />
+    <p class="subreddit-label">*choose a subreddit</p>
+    <input class="subreddit" type="text" name="subreddit" value="" maxlength="100" />
 </div>
 
 <div class="form-block">
     <p>options</p>
-    <input class="subreddit" type="checkbox" name="subreddit" value="" />
+    <input class="subscribe" type="checkbox" name="subscribe" value="" />
     <span class="send-reply">send replies to my inbox</span>
 </div>
 `;

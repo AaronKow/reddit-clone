@@ -51,10 +51,12 @@ function checkTab() {
     submitLinkTab = content.querySelector(".submit-form .toggle-submit > .link"),
     submitTextTab = content.querySelector(".submit-form .toggle-submit > .text");
     submitLinkTab.onclick = () => {
+        $global.currentPage = 'newLink';
         $global.newSubmit = "link";
         UpdateDOM();
     };
     submitTextTab.onclick = () => {
+        $global.currentPage = 'newText';
         $global.newSubmit = "text";
         UpdateDOM();
     };
