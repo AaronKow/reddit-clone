@@ -17,7 +17,7 @@ const Content = () => {
         <div class="content">
 
             <!-- List of Entry -->
-            ${ $global.newSubmit ? Form() : Entries }
+            ${ $global.newSubmit ? Form() : Entries() }
 
             <!-- Sidebar on the right -->
             ${ Sidebar }
