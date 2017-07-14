@@ -1,0 +1,792 @@
+/**
+ *
+ * [Clone Reddit]
+ * Version: 1.0.0
+ * Author: Aaron Kow
+ * Website: -
+ *
+ */
+
+/*----------------------------------------------*\
+  # Reset
+\*----------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------------------------------------*\
+  # Properties
+\*----------------------------------------------*/
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font: normal x-small verdana,arial,helvetica,sans-serif;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.clearfix:after {
+    content: '.';
+    visibility: hidden;
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+/*----------------------------------------------*\
+  # Navigation
+\*----------------------------------------------*/
+nav {
+    position: relative;
+    font-size: 1.1vmin;
+    padding: .5vmin .5vmin;
+    background: #F0F0F0;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    z-index: 2;
+}
+
+.nav-layout {
+    display: inline;
+    white-space: nowrap;
+}
+
+.nav-layout a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-layout a:not(.title):hover {
+    text-decoration: underline;
+}
+
+.nav-layout a > i {
+    position: absolute;
+    top: .7vmin;
+    right: -1.7vmin;
+    font-size: 2.3vmin;
+    line-height: 0;
+    color: rgba(0,0,0,.5);
+}
+
+.nav-layout > .title {
+    position: relative;
+    float: left;
+}
+
+.nav-layout > .sub-title {
+    margin: 0 0.5vmin 0 3.5vmin;
+    color: #FF4500;
+    font-weight: bold;
+    float: left;
+}
+
+.nav-layout > .categories {
+    display: inline-block;
+    overflow: hidden;
+    width: 86.5%;
+    float: left;
+}
+
+.nav-layout > .more {
+    float: right;
+    font-weight: bold;
+    margin-right: 1.2vmin;
+}
+
+
+/*----------------------------------------------*\
+  # Header
+\*----------------------------------------------*/
+header {
+    position: relative;
+    background: #CEE3F8;
+    display: flex;
+    align-items: flex-end;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid #5F99CF;
+    z-index: 2;
+}
+
+header .title {
+    position: relative;
+    background-image: url('./img/reddit-logo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 6vmin;
+    width: 18vmin;
+    display: inline-block;
+    margin: 1vmin;
+}
+
+header > .title > img {
+    width: 9%;
+    margin: 1vmin;
+}
+
+header > .sub-title {
+    flex-grow: 1;
+}
+
+header > .sub-title > .popular {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.6vmin;
+    display: block;
+    margin-bottom: 1vmin;
+}
+
+header > .sub-title > .popular:hover {
+    text-decoration: underline;
+}
+
+header > .sub-title > .category {
+    /*margin-bottom: -1px;*/
+    /*border-bottom: 1px solid #fff;*/
+}
+
+header > .sub-title > .category > a {
+    text-decoration: none;
+    color: #336699;
+    font-weight: bold;
+    font-size: 1.5vmin;
+    padding: .6vmin .6vmin 0 .6vmin;
+    background: #EFF7FF;
+    margin-right: .5vmin;
+    border-bottom: 1px solid #5F99CF;
+}
+
+header > .sub-title > .category > a.active {
+    color: #FF4500;
+    background: #fff;
+    border: 1px solid #5F99CF;
+    border-bottom: 1px solid #fff;
+}
+
+header > .configuration {
+    background: #EFF7FF;
+    font-size: 1.4vmin;
+    padding: .5vmin .7vmin;
+    border-top-left-radius: 1vmin;
+    border-top-right-radius: 1vmin;
+}
+
+header > .configuration > a {
+    text-decoration: none;
+}
+
+header > .configuration > a:not(.username):not(.message):hover {
+    text-decoration: underline;
+}
+
+header > .configuration > .username {
+    color: #3366B3;
+}
+
+header > .configuration > .preferences {
+    font-weight: bold;
+}
+
+
+/*----------------------------------------------*\
+  # Content
+\*----------------------------------------------*/
+.content {
+    position: relative;
+    left: .8%;
+    width: calc(100% - .8% - 2px);
+    min-height: 100%;
+    height: 100%;
+    /*border: 1px solid #111;*/
+    padding: 1vmin 0 1vmin 1vmin;
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------*\
+  # Entries
+\*----------------------------------------------*/
+.content .entries {
+    display: inline-flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+}
+
+.content .entries > .entry {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vmin;
+}
+
+.content .entries > .entry > .voting,
+.content .entries > .entry > .topic {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .entries > .entry > .topic > .title,
+.content .entries > .entry > .topic > .details,
+.content .entries > .entry > .topic > .details .submit-detail,
+.content .entries > .entry > .topic > .details .action-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.content .entries > .entry > .topic > .title {
+    align-items: flex-end;
+}
+
+.content .entries > .entry > .numbering {
+    font-family: arial;
+    color: rgba(0,0,0,.3);
+    font-size: 2.2vmin;
+    margin: 2.3vmin 2vmin 0 1vmin;
+}
+
+/* Voting */
+.content .entries > .entry > .voting {
+    align-items: center;
+    color: rgba(0,0,0,.3);
+    font-size: 2.2vmin;
+    font-weight: bold;
+    margin: 0 0 1vmin 0;
+}
+
+.content .entries > .entry > .voting > a > i {
+    color: rgba(0,0,0,.3);
+}
+
+.content .entries > .entry > .voting > .count {
+    font-size: 1.7vmin;
+}
+
+/* Thumbnail */
+.content .entries > .entry > .thumbnail {
+    background-repeat: no-repeat;
+    background-image: url('./img/reddit-icons.png');
+    height: 52px;
+    width: 70px;
+    margin: 0 1vmin;
+}
+
+.content .entries > .entry > .thumbnail.link {
+    background-position: 0px -1098px;
+}
+
+.content .entries > .entry > .thumbnail.post {
+    background-position: 0px -1266px;
+}
+
+/* Topic */
+/* title */
+.content .entries > .entry > .topic > .title > .link {
+    font-size: 2vmin;
+    margin-right: 1vmin;
+    text-decoration: none;
+}
+
+.content .entries > .entry > .topic > .title > .domain {
+    font-size: 1.3vmin;
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+}
+
+.content .entries > .entry > .topic > .title > .domain:hover {
+    text-decoration: underline;
+}
+
+/* Topic */
+/* details */
+.content .topic > .details {
+    margin-top: .4vmin;
+}
+
+.content .topic > .details > .btn-expand {
+    background-image: url('./img/reedit-icons-2.png');
+    background-repeat: no-repeat;
+    height: 23px;
+    width: 23px;
+    margin: 0 1.1vmin 0 0;
+}
+
+.content .topic > .details > .btn-expand.link {
+    background-position: 0px -399px;
+}
+
+.content .topic > .details > .btn-expand.post {
+    background-position: 0px -457px;
+}
+
+.content .topic > .details > .btn-expand.link:hover {
+    background-position: 0px -370px;
+}
+
+.content .topic > .details > .btn-expand.post:hover {
+    background-position: 0px -428px;
+}
+
+.content .topic > .details > .inner-details {
+    font-size: 1.5vmin;
+    color: rgba(0,0,0,.6);
+}
+
+.content .topic > .details > .inner-details .user,
+.content .topic > .details > .inner-details .subreddit-link {
+    text-decoration: none;
+    color: #336699;
+}
+
+.content .topic > .details > .inner-details .user {
+    margin: 0 .7vmin;
+}
+
+.content .topic > .details > .inner-details .user:hover,
+.content .topic > .details > .inner-details .subreddit-link:hover {
+  text-decoration: underline;
+}
+
+.content .topic > .details > .inner-details .subscribe {
+    text-decoration: none;
+    margin: 0 .7vmin;
+}
+
+/* Topic */
+/* details */
+/* action detail */
+.content .topic > .details > .inner-details > .action-detail {
+    margin-top: .3vmin;
+    font-size: 1.3vmin;
+}
+
+.content .topic > .details > .inner-details > .action-detail > a {
+    text-decoration: none;
+    color: #888888;
+    font-weight: bold;
+    margin-right: 1vmin;
+}
+
+.content .topic > .details > .inner-details > .action-detail > a:hover {
+    text-decoration: underline;
+}
+
+
+/*----------------------------------------------*\
+  # Sidebar
+\*----------------------------------------------*/
+aside.grippy {
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: .7%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    /*box-shadow: 0 0 6px rgba(0,0,0,0.2);*/
+    background: #F4F4F4;
+    z-index: 1;
+}
+
+.content aside.sidebar {
+    display: inline-flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    float: right;
+    width: 20%;
+    height: 100%;
+    padding: 1vmin;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.content aside.sidebar > form {
+    position: relative;
+}
+
+.content aside.sidebar input {
+    border: 1px solid gray;
+    font-size: 1.7vmin;
+    font-family: verdana;
+    width: 100%;
+    padding: 1vmin 1.5vmin;
+    box-sizing: border-box;
+    margin-bottom: 2vmin;
+}
+
+.content aside.sidebar input::placeholder {
+    color: rgba(0,0,0,.6);
+}
+
+.content aside.sidebar > form > a {
+    color: rgba(0,0,0,.6);
+    position: absolute;
+    top: 0;
+    right: 1.5vmin;
+    font-size: 2.5vmin;
+    transform: translate(0, 12.5%);
+}
+
+.content aside.sidebar .btn-entry {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    position: relative;
+    border: 1px solid #c4dbf1;
+    background: #ffffff none repeat-x scroll center left;
+    background-image: url('./img/reddit-icons.png');
+    background-position: 0px -278px;
+    background-repeat: repeat;
+    font-size: 150%;
+    color: #336699;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    letter-spacing: -1px;
+    line-height: 29px;
+    height: 29px;
+    margin: 2vmin 0 0 0;
+}
+
+.content aside.sidebar .btn-entry:hover {
+    border-color: #879eb4;
+    background-image: url('./img/reddit-icons.png');
+    background-position: 0px -243px;
+    background-repeat: repeat;
+}
+
+.content aside.sidebar .btn-entry .nub {
+    position: absolute;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: 31px;
+    width: 24px;
+    background: #ffffff none no-repeat scroll center left;
+    background-image: url('./img/reddit-icons.png');
+    background-position: -61px -1369px;
+    background-repeat: no-repeat;
+}
+
+.content aside.sidebar .btn-entry:hover > .nub {
+    background-position: -31px -1369px;
+}
+
+/* Goldvertisement */
+.goldvertisement {
+    font-family: "Bitstream Charter","Hoefler Text","Palatino Linotype","Book Antiqua",Palatino,georgia,garamond,FreeSerif,serif;
+    margin: 2vmin 0 0 0;
+    border: 1px solid #c4b487;
+    text-align: center;
+    line-height: 1.3em;
+    box-shadow: 0 0 10px #dad0b3 inset;
+    color: #554a2a;
+}
+
+.goldvertisement .inner {
+    margin: 1px;
+    border: 1px solid #dbd1b5;
+    padding: 6px 8px;
+}
+
+.goldvertisement h2 {
+    margin: 0;
+    font-size: 1.5vmin;
+    font-weight: normal;
+    color: inherit;
+}
+
+.goldvertisement .progress {
+    padding: 7.5px 0;
+}
+
+.goldvertisement .progress p {
+    float: right;
+    font-weight: bold;
+    font-size: 15px;
+    color: #5a3f1a;
+    line-height: 19px;
+    margin-left: 6px;
+    margin-top: 0;
+}
+
+.goldvertisement .progress .bar {
+    border: 1px solid #dad0b3;
+    height: 17px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.goldvertisement .progress .bar span {
+    display: block;
+    height: 100%;
+    background-color: #f3e287;
+    background-image: linear-gradient(to bottom,#fff8ba 0%,#eccf90 100%);
+    border-radius: 8.5px;
+}
+
+.goldvertisement a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: #fbfaf8;
+    border: 1px solid #d5c9a9;
+    border-bottom-width: 2px;
+    color: #554a2a;
+}
+
+.goldvertisement a:hover {
+    background: #f3e287;
+}
+
+/*Recent View*/
+.recent-view {
+    display: flex;
+    flex-direction: column;
+    margin: 3vmin 0 0 0;
+}
+
+.recent-view > h2 {
+    color: gray;
+    font-size: 1.6vmin;
+}
+
+.recent-view > .account-activity {
+    margin: 2vmin 0 0 0;
+    align-self: center;
+}
+
+.recent-view > .blocks {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 1vmin 1vmin;
+}
+
+.recent-view > .blocks > .clear {
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+.recent-view > .blocks > .block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vmin;
+}
+
+.recent-view > .blocks > .block > .voting-block,
+.recent-view > .blocks > .block > .topic-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-view > .blocks > .block > .voting-block > a {
+    color: rgba(0,0,0,.3);
+    text-decoration: none;
+    font-size: 2.2vmin;
+}
+
+.recent-view > .blocks > .block > .topic-block {
+    margin: 0 1vmin;
+}
+
+.recent-view > .blocks > .block > .topic-block > a {
+    color: #6E6699;
+    font-size: 1.7vmin;
+    text-decoration: none;
+}
+
+.recent-view > .blocks > .block > .topic-block > .topic-detail {
+    display: flex;
+    flex-direction: row;
+    margin: .4vmin 1vmin;
+    font-size: 1.4vmin;
+}
+
+.recent-view > .blocks > .block > .topic-block > .topic-detail > p {
+    margin-right: .7vmin;
+    color: gray;
+}
+
+.recent-view > .blocks > .block > .topic-block > .topic-detail > a {
+    margin-left: .7vmin;
+    text-decoration: none;
+}
+
+/*----------------------------------------------*\
+  # Submit Form
+\*----------------------------------------------*/
+.submit-form {
+    display: inline-flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+}
+
+.submit-form > h1 {
+    font-size: 2.2vmin;
+}
+
+/* Toggle Submit */
+.toggle-submit {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 2vmin;
+    border-bottom: .5vmin solid #5F99CF;
+}
+
+.toggle-submit > a:first-child {
+    margin-left: 15px;
+}
+
+.toggle-submit > a {
+    text-decoration: none;
+    font-size: 1.5vmin;
+    background: #EFF7FF;
+    padding: .2vmin 1.7vmin 0 1.7vmin;
+    border: 1px solid #C1C1C1;
+    border-bottom: none;
+}
+
+.toggle-submit > a.active {
+    font-size: 2vmin;
+    border: none;
+    color: #fff;
+    background: #5F99CF;
+}
+
+/* Form */
+/* Notice */
+.form > .notice {
+    margin: 1vmin 0;
+    padding: 1vmin;
+    background: #f6e69f;
+    border: 1px solid #FFA500;
+    font-size: 1.65vmin;
+}
+
+/* Form */
+/* Form Block */
+.form-block {
+    margin: 2vmin 0;
+    padding: 1vmin 1.5vmin 2.5vmin 1.5vmin;
+    background: #CEE3F8;
+    font-size: 2.2vmin;
+    border-radius: .5vmin;
+}
+
+.form-block > input:not([type="checkbox"]),
+.form-block > textarea {
+    border: 1px solid gray;
+    font-size: 2.2vmin;
+    margin-top: 1vmin;
+    font-family: verdana;
+    width: 100%;
+    padding: 1vmin;
+    box-sizing: border-box;
+}
+
+.form-block > .send-reply {
+    font-size: 2vmin;
+}
+
+/* Form */
+/* Form Footer */
+.form-footer > .policy-notice {
+    font-size: 1.6vmin;
+    background: #E4F2FB;
+    border: 1px solid #5F99CF;
+    border-radius: .5vmin;
+    padding: 1vmin;
+}
+
+.form-footer > .policy-notice > a {
+    font-weight: bold;
+    color: #336699;
+}
+
+.form-footer > .required-text {
+    font-size: 1.3vmin;
+    margin: 1.5vmin 0;
+}
+
+.form-footer > .btn-submit {
+    padding: .7vmin;
+}
+
+/*----------------------------------------------*\
+  # Footer
+\*----------------------------------------------*/
+footer {
+    padding: 3vmin 0 0 0;
+    width: 100%;
+    text-align: center;
+    color: #888;
+    font-size: 1.3vmin;
+}
+
+footer > .advertise {
+    display: block;
+    margin: 3vmin 0;
+}
+
+footer > p > a {
+  color: #888;
+}

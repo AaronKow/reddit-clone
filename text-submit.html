@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reddit Clone | by A.K.</title>
+    <meta name="description" content='A Reddit Clone developed by Aaron Kow'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <div class="nav-layout">
+                <a href="#" class="title">
+                  MY SUBREDDITS <i class="fa fa-caret-down"></i>
+                </a>
+                <a href="#" class="sub-title">
+                  POPULAR
+                </a>
+
+                <div class="categories">
+                    -
+                    <a href="#">
+                    ALL
+                  </a> -
+                    <a href="#">
+                    RANDOM
+                  </a> | <a href="#">
+                    ASKREDDIT
+                  </a> -
+                    <a href="#">
+                    TODAYILEARNED
+                  </a> -
+                    <a href="#">
+                    WORLDNEWS
+                  </a> -
+                    <a href="#">
+                    FUNNY
+                  </a> -
+                    <a href="#">
+                    PICS
+                  </a> -
+                    <a href="#">
+                    NEWS
+                  </a> -
+                    <a href="#">
+                    GIFS
+                  </a> -
+                    <a href="#">
+                    VIDEOS
+                  </a> -
+                    <a href="#">
+                    MOVIES
+                  </a> -
+                    <a href="#">
+                    AWW
+                  </a> -
+                    <a href="#">
+                    GAMING
+                  </a> -
+                    <a href="#">
+                    SHOWERTHOUGHTS
+                  </a> -
+                    <a href="#">
+                    MILDLYINTERESTING
+                  </a> -
+                    <a href="#">
+                    JOKES
+                  </a> -
+                    <a href="#">
+                    SPORTS
+                  </a> -
+                    <a href="#">
+                    IAMA
+                  </a> -
+                    <a href="#">
+                    OLDSCHOOLCOOL
+                  </a> -
+                    <a href="#">
+                    TELEVISION
+                  </a> -
+                    <a href="#">
+                    FOOD
+                  </a> -
+                    <a href="#">
+                    BLOG
+                  </a> -
+                    <a href="#">
+                    TIFU
+                  </a> -
+                    <a href="#">
+                    SCIENCE
+                  </a> -
+                    <a href="#">
+                    LIFEPROTIPS
+                  </a> -
+                    <a href="#">
+                    NOTTHEONION
+                  </a> -
+                    <a href="#">
+                    BOOKS
+                  </a> -
+                    <a href="#">
+                    PERSONALFINANCE
+                  </a> -
+                    <a href="#">
+                    PHOTOSHOPBATTLES
+                  </a> -
+                    <a href="#">
+                    TWOXCHROMOSOMES
+                  </a> -
+                    <a href="#">
+                    EXPLAINLIKEIMFIVE
+                  </a> -
+                    <a href="#">
+                    EARTHPORN
+                  </a> -
+                    <a href="#">
+                    SPACE
+                  </a> -
+                    <a href="#">
+                    UPLIFTINGNEWS
+                  </a> -
+                    <a href="#">
+                    WRITINGPROMPTS
+                  </a> -
+                    <a href="#">
+                    MUSIC
+                  </a> -
+                    <a href="#">
+                    ART
+                  </a> -
+                    <a href="#">
+                    GETMOTIVATED
+                  </a> -
+                    <a href="#">
+                    HISTORY
+                  </a> -
+                    <a href="#">
+                    NOSLEEP
+                  </a> -
+                    <a href="#">
+                    DATAISBEAUTIFUL
+                  </a> -
+                    <a href="#">
+                    FUTUROLOGY
+                  </a> -
+                    <a href="#">
+                    ASKSCIENCE
+                  </a> -
+                    <a href="#">
+                    DIY
+                  </a> -
+                    <a href="#">
+                    GADGETS
+                  </a> -
+                    <a href="#">
+                    DOCUMENTARIES
+                  </a> -
+                    <a href="#">
+                    CREEPY
+                  </a> -
+                    <a href="#">
+                    INTERNETISBEAUTIFUL
+                  </a> -
+                    <a href="#">
+                    LISTENTOTHIS
+                  </a> -
+                    <a href="#">
+                    PHILOSOPHY
+                  </a> -
+                    <a href="#">
+                    ANNOUNCEMENTS
+                  </a>
+                </div>
+
+                <a href="#" class="more">
+                  MORE »
+                </a>
+            </div>
+        </nav>
+
+        <header>
+            <a href="#" class="title"></a>
+            <div class="sub-title">
+                <a href="#" class="popular">POPULAR</a>
+
+                <div class="category">
+                    <a href="#" class="active">hot</a>
+                    <a href="#">new</a>
+                    <a href="#">rigin</a>
+                    <a href="#">controversial</a>
+                    <a href="#">top</a>
+                    <a href="#">gilded</a>
+                </div>
+            </div>
+            <div class="configuration">
+                <a href="#" class="username">
+                    john_doe
+                </a> (1)|
+                <a href="#" class="message">
+                    <i class="fa fa-envelope-o"></i>
+                </a>|
+                <a href="#" class="preferences">
+                    preferences
+                </a>|
+                <a href="#">
+                    logout
+                </a>
+            </div>
+        </header>
+
+        <!-- Grippy Handle -->
+        <aside class="grippy"></aside>
+
+        <!-- Content -->
+        <div class="content">
+
+            <div class="submit-form">
+                <h1>submit to reddit</h1>
+
+                <div class="toggle-submit">
+                    <a href="#" class="link">
+                        link
+                    </a>
+
+                    <a href="#" class="text active">
+                        text
+                    </a>
+                </div>
+
+                <div class="form">
+                    <div class="notice">
+                        You are submitting a text-based post. Speak your mind. A title is required, but expanding further in the text field is not. Beginning your title with "vote up if" is violation of intergalactic law.
+                    </div>
+
+                    <div class="form-block">
+                        <p>*title</p>
+                        <textarea class="title" name="title" rows="2" cols="80"></textarea>
+                    </div>
+
+                    <div class="form-block">
+                        <p>text (optional)</p>
+                        <textarea class="title" name="title" rows="4" cols="80"></textarea>
+                    </div>
+
+                    <div class="form-block">
+                        <p>*choose a subreddit</p>
+                        <input class="subreddit" type="text" name="subreddit" value="" />
+                    </div>
+
+                    <div class="form-block">
+                        <p>options</p>
+                        <input class="subreddit" type="checkbox" name="subreddit" value="" />
+                        <span class="send-reply">send replies to my inbox</span>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p class="policy-notice">
+                        please be mindful of reddit's <a href="#">content policy</a> and practice <a href="#">good reddiquette</a>.
+                    </p>
+                    <p class="required-text">
+                        *required
+                    </p>
+                    <button class="btn-submit" type="button" name="button">submit</button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <form>
+                    <input type="text" placeholder="search" />
+                    <a href="#">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </form>
+
+                <a href="#" class="btn-entry">
+                    Submit a new link
+                    <div class="nub"></div>
+                </a>
+
+                <a href="#" class="btn-entry">
+                    Submit a new text post
+                    <div class="nub"></div>
+                </a>
+
+                <!-- Goldvertisement -->
+                <div class="goldvertisement">
+                    <div class="inner">
+                        <h2>daily reddit gold goal</h2>
+                        <div class="progress">
+                            <p>92%</p>
+                            <div class="bar">
+                                <span style="width: 92%"></span>
+                            </div>
+                        </div>
+
+                        <a href="#">help support reddit</a>
+                    </div>
+                </div>
+
+                <div class="recent-view">
+                    <h2>RECENTLY VIEWED LINKS</h2>
+                    <div class="blocks">
+                        <div class="block">
+                            <div class="voting-block">
+                                <a href="#up">
+                                    <i class="fa fa-arrow-up"></i>
+                                </a>
+
+                                <a href="#down">
+                                    <i class="fa fa-arrow-down"></i>
+                                </a>
+                            </div>
+
+                            <div class="topic-block">
+                                <a href="#" class="topic-name">
+                                  TIL - Greyhounds are universal blood donors, and with few exceptions, blood from any greyhound can be given to any other breed of dog.
+                                </a>
+                                <div class="topic-detail">
+                                    <p>24.9k points</p>
+                                    |
+                                    <a href="#">
+                                        590 comments
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="voting-block">
+                                <a href="#up">
+                                    <i class="fa fa-arrow-up"></i>
+                                </a>
+
+                                <a href="#down">
+                                    <i class="fa fa-arrow-down"></i>
+                                </a>
+                            </div>
+
+                            <div class="topic-block">
+                                <a href="#" class="topic-name">
+                                    My Hilarious Father (with the magazine) and my Grandfather, Grandmother, and Uncle at His Bar Mitzvah in 1972
+                                </a>
+                                <div class="topic-detail">
+                                    <p>45.8k points</p>
+                                    |
+                                    <a href="#">
+                                       1078 comments
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="voting-block">
+                                <a href="#up">
+                                    <i class="fa fa-arrow-up"></i>
+                                </a>
+
+                                <a href="#down">
+                                    <i class="fa fa-arrow-down"></i>
+                                </a>
+                            </div>
+
+                            <div class="topic-block">
+                                <a href="#" class="topic-name">
+                                    A surprise present
+                                </a>
+                                <div class="topic-detail">
+                                    <p>37.6k points</p>
+                                    |
+                                    <a href="#">
+                                       1185 comments
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="voting-block">
+                                <a href="#up">
+                                    <i class="fa fa-arrow-up"></i>
+                                </a>
+
+                                <a href="#down">
+                                    <i class="fa fa-arrow-down"></i>
+                                </a>
+                            </div>
+
+                            <div class="topic-block">
+                                <a href="#" class="topic-name">
+                                    Anon has a hard life
+                                </a>
+                                <div class="topic-detail">
+                                    <p>8987 points</p>
+                                    |
+                                    <a href="#">
+                                       125 comments
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="voting-block">
+                                <a href="#up">
+                                    <i class="fa fa-arrow-up"></i>
+                                </a>
+
+                                <a href="#down">
+                                    <i class="fa fa-arrow-down"></i>
+                                </a>
+                            </div>
+
+                            <div class="topic-block">
+                                <a href="#" class="topic-name">
+                                    My Hilarious Father (with the magazine) and my Grandfather, Grandmother, and Uncle at His Bar Mitzvah in 1972
+                                </a>
+                                <div class="topic-detail">
+                                    <p>11.8k points</p>
+                                    |
+                                    <a href="#">
+                                       632 comments
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="clear">clear</a>
+                    </div>
+
+                    <a href="#" class="account-activity">account activity</a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                Use of this site constitutes acceptance of our <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>. © 2017 reddit inc. All rights reserved.
+            </p>
+            <p>
+                REDDIT and the ALIEN Logo are registered trademarks of reddit inc.
+            </p>
+
+            <a href="#" class="advertise">
+                Advertise - lifestyles
+            </a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
