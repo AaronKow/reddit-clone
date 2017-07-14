@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "es2015",
+      {
+        // Use for Tree Shakin (Dead Code Elimination)
+        // telling babel not to transpile modules from ES6 to commonJS
+        "modules": false
+      }
+    ],
+    "stage-0"
+  ]
+}

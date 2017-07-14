@@ -164,7 +164,7 @@ header {
 
 header .title {
     position: relative;
-    background-image: url('./img/reddit-logo.png');
+    background-image: url('../img/reddit-logo.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 6vmin;
@@ -318,7 +318,7 @@ header > .configuration > .preferences {
 /* Thumbnail */
 .content .entries > .entry > .thumbnail {
     background-repeat: no-repeat;
-    background-image: url('./img/reddit-icons.png');
+    background-image: url('../img/reddit-icons.png');
     height: 52px;
     width: 70px;
     margin: 0 1vmin;
@@ -357,7 +357,7 @@ header > .configuration > .preferences {
 }
 
 .content .topic > .details > .btn-expand {
-    background-image: url('./img/reedit-icons-2.png');
+    background-image: url('../img/reedit-icons-2.png');
     background-repeat: no-repeat;
     height: 23px;
     width: 23px;
@@ -488,7 +488,7 @@ aside.grippy {
     position: relative;
     border: 1px solid #c4dbf1;
     background: #ffffff none repeat-x scroll center left;
-    background-image: url('./img/reddit-icons.png');
+    background-image: url('../img/reddit-icons.png');
     background-position: 0px -278px;
     background-repeat: repeat;
     font-size: 150%;
@@ -503,7 +503,7 @@ aside.grippy {
 
 .content aside.sidebar .btn-entry:hover {
     border-color: #879eb4;
-    background-image: url('./img/reddit-icons.png');
+    background-image: url('../img/reddit-icons.png');
     background-position: 0px -243px;
     background-repeat: repeat;
 }
@@ -516,7 +516,7 @@ aside.grippy {
     height: 31px;
     width: 24px;
     background: #ffffff none no-repeat scroll center left;
-    background-image: url('./img/reddit-icons.png');
+    background-image: url('../img/reddit-icons.png');
     background-position: -61px -1369px;
     background-repeat: no-repeat;
 }
