@@ -7,11 +7,20 @@ This is a clone-version of Reddit. By default, this app will build in `Productio
 View the [live demo](https://goo.gl/PTtq54) of Reddit-Clone.
 
 
+- [About this Project](https://github.com/AaronKow/reddit-clone#about-this-project)
 - [To build the output](https://github.com/AaronKow/reddit-clone#to-build-the-output)
 - [Launch the App](https://github.com/AaronKow/reddit-clone#launch-the-app)
 - [Plugins](https://github.com/AaronKow/reddit-clone#superpowers-plugins-used-in-this-project)
 - [File Structure for reddit-clone](https://github.com/AaronKow/reddit-clone#file-structure-for-reddit-clone)
 - [Roadmap](https://github.com/AaronKow/reddit-clone#roadmap)
+
+
+## Features in this Project
+- contains a list of topics which allows users to upvote or downvote multiple times
+- allow user to submit topics, which topic is simply a string that does not exceed 255 characters.
+- 20 sample topics listed on the page initially, user can add more
+- unit test are included in this project
+
 
 ## To build the output
 
