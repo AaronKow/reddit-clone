@@ -1,6 +1,12 @@
-# Reddit Clone
+## Reddit Clone
+This is a clone-version of Reddit. By default, this app will build in `Production` mode.
 
-This is a clone-version of Reddit. By default, this app will build in `Production` mode. Live [demo](https://goo.gl/PTtq54) the Reddit-Clone.
+[![Build Status](https://travis-ci.org/AaronKow/reddit-clone.svg?branch=master)](https://travis-ci.org/AaronKow/reddit-clone)
+[![license](https://img.shields.io/github/license/AaronKow/reddit-clone.svg)]()
+[![Packagist](https://img.shields.io/packagist/v/AaronKow/reddit-clone.svg)]()
+
+View the [live demo](https://goo.gl/PTtq54) of Reddit-Clone.
+
 
 - [To build the output](https://github.com/AaronKow/reddit-clone#to-build-the-output)
 - [Launch the App](https://github.com/AaronKow/reddit-clone#launch-the-app)
@@ -8,7 +14,7 @@ This is a clone-version of Reddit. By default, this app will build in `Productio
 - [File Structure for reddit-clone](https://github.com/AaronKow/reddit-clone#file-structure-for-reddit-clone)
 - [Roadmap](https://github.com/AaronKow/reddit-clone#roadmap)
 
-# To build the output
+## To build the output
 
 ```bash
 $ npm install
@@ -20,17 +26,17 @@ $ npm run dev
 $ npm run build
 ```
 
-# Launch the App
+## Launch the App
 
 Go to `./dist` folder, just launch the `index.html` in your browser.
 
-# To test the App
+## To test the App
 
 ```bash
 $ npm run test
 ```
 
-# Superpowers (plugins) used in this project
+## Superpowers (plugins) used in this project
 
 - Icons: `Font-Awesome`
 - Build System: `Webpack` [Boilerplate Credits: @emiloberg](https://github.com/emiloberg/webpack-tutorial)
@@ -38,7 +44,7 @@ $ npm run test
 - Additional Javascript Library: `Underscore.js`
 - Test Runner + Framework: `Jest`
 
-# File Structure for reddit-clone
+## File Structure for reddit-clone
 
 ```
 > [reddit-clone]
@@ -72,7 +78,7 @@ $ npm run test
     └── webpack.config.js     ::> Webpack Configuration File
 ```
 
-## Roadmap
+### Roadmap
 
 - ~~create the mock page for Reddit list~~
 - ~~include build system: Webpack~~
