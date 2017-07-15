@@ -1,5 +1,6 @@
-## Reddit Clone
-This is a clone-version of Reddit. By default, this app will build in `Production` mode.
+# Reddit Clone
+
+This is a clone-version of Reddit. By default, this app will build in `Production` mode. Live [demo](https://goo.gl/PTtq54) the Reddit-Clone.
 
 - [To build the output](https://github.com/AaronKow/reddit-clone#to-build-the-output)
 - [Launch the App](https://github.com/AaronKow/reddit-clone#launch-the-app)
@@ -7,7 +8,8 @@ This is a clone-version of Reddit. By default, this app will build in `Productio
 - [File Structure for reddit-clone](https://github.com/AaronKow/reddit-clone#file-structure-for-reddit-clone)
 - [Roadmap](https://github.com/AaronKow/reddit-clone#roadmap)
 
-## To build the output
+# To build the output
+
 ```bash
 $ npm install
 
@@ -18,31 +20,34 @@ $ npm run dev
 $ npm run build
 ```
 
-## Launch the App
+# Launch the App
+
 Go to `./dist` folder, just launch the `index.html` in your browser.
 
-## To test the App
+# To test the App
+
 ```bash
 $ npm run test
 ```
 
-## Superpowers (plugins) used in this project
+# Superpowers (plugins) used in this project
+
 - Icons: `Font-Awesome`
 - Build System: `Webpack` [Boilerplate Credits: @emiloberg](https://github.com/emiloberg/webpack-tutorial)
 - Transpiler: `Babel`
 - Additional Javascript Library: `Underscore.js`
 - Test Runner + Framework: `Jest`
 
+# File Structure for reddit-clone
 
-## File Structure for reddit-clone
 ```
 > [reddit-clone]
     |
     ├── [__test__]            ::> folder contains all test scripts
     |
-    ├── [dist]			          ::> output folder for this project
+    ├── [dist]                ::> output folder for this project
     |
-    ├── [src]			            ::> source folder, where all the logic reside
+    ├── [src]                 ::> source folder, where all the logic reside
     |     |
     |     ├── [components]    ::> logic structure to be injected into the Html backbone
     |     |
@@ -58,23 +63,23 @@ $ npm run test
     |     |
     |     └── index.js        ::> the starter of script
     |
-    ├── index.html			      ::> Project Html Backbone
+    ├── index.html            ::> Project Html Backbone
     |
-    ├── karma.conf.js	   		  ::> Karma Configuration file
+    ├── karma.conf.js         ::> Karma Configuration file
     |
-    ├── package.json	   		  ::> List of NPM Packages required for this project
+    ├── package.json          ::> List of NPM Packages required for this project
     |
     └── webpack.config.js     ::> Webpack Configuration File
 ```
 
+## Roadmap
 
-### Roadmap
 - ~~create the mock page for Reddit list~~
 - ~~include build system: Webpack~~
 - ~~include a Javascript Library: underscore.js~~
 - ~~Maintain a list of topics and its upvotes/downvotes in-memory data structure (20 topics in a page)~~
 - ~~Allow the user to upvote or downvote a topic multiple times and sort the list~~
-- ~~Allow the user to submit topics, a “topic” is simply a string that does not exceed 255 characters.~~
+- ~~Allow the user to submit topics, a "topic" is simply a string that does not exceed 255 characters.~~
 - ~~Writing unit test~~
 - ~~update readme document~~
 - modularize css (using SCSS preprocessor)

@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "rm -rf dist && webpack --watch",
     "build": "rm -rf dist && webpack",
-    "backup": "karma start karma.conf.js --single-run || true",
     "test": "jest --coverage"
   },
   "repository": {

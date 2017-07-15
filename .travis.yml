@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "6.2.2"
+before_script:
+  - npm i
+script:
+  - npm run test
+cache:
+  directories:
+    - node_modules
