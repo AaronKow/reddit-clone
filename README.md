@@ -79,8 +79,6 @@ $ npm run test
     |
     ├── index.html            ::> Project Html Backbone
     |
-    ├── karma.conf.js         ::> Karma Configuration file
-    |
     ├── package.json          ::> List of NPM Packages required for this project
     |
     └── webpack.config.js     ::> Webpack Configuration File
