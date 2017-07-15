@@ -7,7 +7,7 @@ This is a clone-version of Reddit. By default, this app will build in `Productio
 View the [live demo](https://goo.gl/PTtq54) of Reddit-Clone.
 
 
-- [About this Project](https://github.com/AaronKow/reddit-clone#about-this-project)
+- [Features in this Project](https://github.com/AaronKow/reddit-clone#features-in-this-project)
 - [To build the output](https://github.com/AaronKow/reddit-clone#to-build-the-output)
 - [Launch the App](https://github.com/AaronKow/reddit-clone#launch-the-app)
 - [Plugins](https://github.com/AaronKow/reddit-clone#superpowers-plugins-used-in-this-project)
