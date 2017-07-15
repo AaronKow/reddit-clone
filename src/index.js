@@ -3,7 +3,7 @@
 // Stylesheet
 import './css/style.css';
 
-// methods
+// Methods
 import UpdateDOM from './methods/UpdateDOM';
 
 document.addEventListener('DOMContentLoaded', function(e) {

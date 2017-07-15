@@ -1,7 +1,13 @@
 // Entries (Contain all the list of topics)
 
+// Data
 import EntryList from '../data/EntryList';
+
+// Methods
 import UpdateDOM from '../methods/UpdateDOM';
+
+// Plugins
+import _ from 'underscore';
 
 
 const Entries = () => {

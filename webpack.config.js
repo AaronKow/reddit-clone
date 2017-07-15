@@ -83,6 +83,9 @@ const entry = './src/index.js',
   # 3. Configurations
 \*----------------------------------------------*/
 module.exports = {
+    externals: {
+        'underscore': '_'
+    },
     devtool: 'source-map',
     entry: entry,
     plugins: plugins,

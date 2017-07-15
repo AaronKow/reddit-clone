@@ -1,3 +1,8 @@
+/* Data to hold all entries */
+
+// Plugins
+import _ from 'underscore';
+
 var EntryList = [
     {
         type: 'link',

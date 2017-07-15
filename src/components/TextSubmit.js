@@ -5,12 +5,12 @@ const TextSubmit = `
 
 <div class="form-block">
     <p class="title-label">*title (must not exceed 255 characters)</p>
-    <textarea class="title" name="title" rows="2" cols="80"  maxlength="255" ></textarea>
+    <textarea class="title" name="title" rows="2" cols="80" maxlength="255" ></textarea>
 </div>
 
 <div class="form-block">
     <p>text (optional)</p>
-    <textarea class="text" name="title" rows="4" cols="80" maxlength="255" ></textarea>
+    <textarea class="text" name="text" rows="4" cols="80" maxlength="255" ></textarea>
 </div>
 
 <div class="form-block">

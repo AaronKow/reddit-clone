@@ -3,29 +3,31 @@
 import $global from '../$global';
 import UpdateDOM from './UpdateDOM';
 
-const CheckPage = function() {
-    var headerLink = document.querySelector("header > .title"),
-        content = document.querySelector(".content"),
-        submitLink = content.querySelector(".btn-entry.link"),
-        submitText = content.querySelector(".btn-entry.post");
+const CheckPage = {
+    init: function() {
+        var headerLink = document.querySelector("header > .title"),
+            content = document.querySelector(".content"),
+            submitLink = content.querySelector(".btn-entry.link"),
+            submitText = content.querySelector(".btn-entry.post");
 
 
-    headerLink.onclick = () => {
-        $global.currentPage = 'home';
-        $global.newSubmit = false;
-        UpdateDOM();
-    }
+        headerLink.onclick = () => {
+            $global.currentPage = 'home';
+            $global.newSubmit = false;
+            UpdateDOM();
+        }
 
-    submitLink.onclick = () => {
-        $global.currentPage = 'newLink';
-        $global.newSubmit = "link";
-        UpdateDOM();
-    }
+        submitLink.onclick = () => {
+            $global.currentPage = 'newLink';
+            $global.newSubmit = "link";
+            UpdateDOM();
+        }
 
-    submitText.onclick = () => {
-        $global.currentPage = 'newText';
-        $global.newSubmit = "text";
-        UpdateDOM();
+        submitText.onclick = () => {
+            $global.currentPage = 'newText';
+            $global.newSubmit = "text";
+            UpdateDOM();
+        }
     }
 }
 
