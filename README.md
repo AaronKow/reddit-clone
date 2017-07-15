@@ -2,8 +2,7 @@
 This is a clone-version of Reddit. By default, this app will build in `Production` mode.
 
 [![Build Status](https://travis-ci.org/AaronKow/reddit-clone.svg?branch=master)](https://travis-ci.org/AaronKow/reddit-clone)
-[![license](https://img.shields.io/github/license/AaronKow/reddit-clone.svg)]()
-[![Packagist](https://img.shields.io/packagist/v/AaronKow/reddit-clone.svg)]()
+[![license](https://img.shields.io/github/license/AaronKow/reddit-clone.svg)](https://github.com/AaronKow/reddit-clone/blob/master/LICENSE)
 
 View the [live demo](https://goo.gl/PTtq54) of Reddit-Clone.
 
