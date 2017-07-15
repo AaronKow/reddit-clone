@@ -3,11 +3,11 @@ This is a clone-version of Reddit. By default, this app will build in `Productio
 
 - [To build the output](https://github.com/AaronKow/reddit-clone#to-build-the-output)
 - [Launch the App](https://github.com/AaronKow/reddit-clone#launch-the-app)
-- [Plugins](https://github.com/AaronKow/reddit-clone#superpowers-(plugins)-used-in-this-project)
+- [Plugins](https://github.com/AaronKow/reddit-clone#superpowers-plugins-used-in-this-project)
 - [File Structure for reddit-clone](https://github.com/AaronKow/reddit-clone#file-structure-for-reddit-clone)
 - [Roadmap](https://github.com/AaronKow/reddit-clone#roadmap)
 
-### To build the output
+## To build the output
 ```bash
 $ npm install
 
@@ -18,15 +18,15 @@ $ npm run dev
 $ npm run build
 ```
 
-### Launch the App
+## Launch the App
 Go to `./dist` folder, just launch the `index.html` in your browser.
 
-### To test the App
+## To test the App
 ```bash
 $ npm run test
 ```
 
-#### Superpowers (plugins) used in this project
+## Superpowers (plugins) used in this project
 - Icons: `Font-Awesome`
 - Build System: `Webpack` [Boilerplate Credits: @emiloberg](https://github.com/emiloberg/webpack-tutorial)
 - Transpiler: `Babel`
@@ -34,7 +34,7 @@ $ npm run test
 - Test Runner + Framework: `Jest`
 
 
-### File Structure for reddit-clone
+## File Structure for reddit-clone
 ```
 > [reddit-clone]
     |
