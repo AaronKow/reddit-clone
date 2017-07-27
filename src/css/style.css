@@ -281,6 +281,7 @@ header > .configuration > .preferences {
 
 .content .entries > .entry > .topic {
 		flex: 1;
+		overflow: hidden;
 }
 
 .content .entries > .entry > .topic > .title,
@@ -342,6 +343,8 @@ header > .configuration > .preferences {
     font-size: 2vmin;
     margin-right: 1vmin;
     text-decoration: none;
+		min-width: 0;
+		word-wrap: break-word;
 }
 
 .content .entries > .entry > .topic > .title > .domain {
