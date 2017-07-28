@@ -12,9 +12,10 @@ jobs:
     - stage: test
       script: npm run test
     - stage: Deployment to GitHub Pages
-      script: npm run build
-      script: touch ./dist/CNAME
-      script: echo reddit-clone.aaronkow.me >> ./dist/CNAME
+      script:
+        - npm run build
+        - touch ./dist/CNAME
+        - echo reddit-clone.aaronkow.me >> ./dist/CNAME
       deploy:
         provider: pages
         skip_cleanup: true
